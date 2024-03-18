@@ -13,8 +13,8 @@ def get_cats_info(path):
                 id , name, age = line.strip().split(',')
                 my_dict = {'id':id, 'name': name, 'age':age}
                 list_of_dicts.append(my_dict)
-
-            print(list_of_dicts)
+            
+            return list_of_dicts
 
     except FileNotFoundError as err:
         print('Ошибка')
