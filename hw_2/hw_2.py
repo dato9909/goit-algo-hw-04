@@ -1,9 +1,8 @@
-from pathlib import Path
+
 
 def get_cats_info(path):
     
-    path = Path("hw_2/hw_2.txt")
-
+    
     list_of_dicts = []
 
     try:
@@ -13,10 +12,10 @@ def get_cats_info(path):
                 id , name, age = line.strip().split(',')
                 my_dict = {'id':id, 'name': name, 'age':age}
                 list_of_dicts.append(my_dict)
-            
+            print(list_of_dicts)
             return list_of_dicts
 
     except FileNotFoundError as err:
         print('Ошибка')
 
-get_cats_info("/hw_2/hw_2.txt")
+get_cats_info("/Users/david/Desktop/GOIT/goit-algo-hw-04/hw_2/hw_2.txt")
